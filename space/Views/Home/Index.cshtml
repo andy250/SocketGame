@@ -1,0 +1,21 @@
+﻿@model dynamic
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>space</title>
+    <link href="~/Content/space.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h1>Enter your name</h1>
+    </div>
+    <form action="@Url.Action("SaveUser")" method="POST">
+        <input name="user" type="text"/>
+        <input type="submit" value="OK"/>
+    </form>
+</body>
+</html>

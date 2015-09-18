@@ -1,0 +1,40 @@
+﻿@model string
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>space</title>
+    <link href="~/Content/space.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="display: none">
+        <img src="~/Content/rsH6n.png" id="ship" />
+        <img src="~/Content/hit.png" id="ship_hit" />
+    </div>
+    <div>
+        <h1>
+            @Model in space! <a href="@Url.Action("Logout")">logout</a>
+        </h1>
+
+</div>
+<nav>
+    <a href="@Url.Action("Health")" data-ev="hlt">health</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="msg" style="font-size: 20px; font-weight: bold;"></span>
+    <div class="my-health">
+        <div class="my-health-value"></div>
+    </div>
+</nav>
+<div class="game" data-player="@Model">
+    <canvas id="gameCanvas"></canvas>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<script src="~/Content/Anim.js"></script>
+<script src="~/Content/Keys.js"></script>
+<script src="~/Content/Shot.js"></script>
+<script src="~/Content/Player.js"></script>
+<script src="~/Content/Space.js"></script>
+</body>
+</html>
